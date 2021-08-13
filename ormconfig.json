@@ -8,10 +8,11 @@
     "password": "postgres",
     "database": "test",
     "synchronize": false,
-    "entities": ["entities/*.js"],
+    "entities": ["entities/*.ts"],
     "migrationsTableName": "custom_migration_table",
     "migrations": ["migrations/*.ts"],
     "cli": {
+        "entitiesDir": "entities",
         "migrationsDir": "migrations"
     }
   }
