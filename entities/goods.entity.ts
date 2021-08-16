@@ -1,18 +1,16 @@
-import { Column, Entity, Index, PrimaryGeneratedColumn } from "typeorm";
+import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
 
-@Index("goods_id_idx", ["id"], {})
-@Index("goods_pk", ["id"], { unique: true })
-@Entity("goods", { schema: "public" })
+@Entity()
 export class Goods {
-  @PrimaryGeneratedColumn({ type: "bigint", name: "id" })
-  id: string;
+  @PrimaryGeneratedColumn()
+  id: number;
 
-  @Column("character varying", { name: "art_nunmber" })
+  @Column()
   artNunmber: string;
 
-  @Column("character varying", { name: "name", nullable: true })
+  @Column()
   name: string | null;
 
-  @Column("character varying", { name: "description", nullable: true })
+  @Column()
   description: string | null;
 }
