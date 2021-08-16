@@ -18,9 +18,6 @@
 1. Откатить миграцию:
 `npm run typeorm -- migration:revert`
 
-**Проблема №1** typeorm cli должен отслеживать изменения в `entity` и генерировать миграции. Почему-то создаются фалы миграции на новые `entity`, а при изменении существующих:
-> No changes in database schema were found - cannot generate a migration. To create a new empty migration use "typeorm migration:create" command
-
 Есть способ частично проверить соответствие сущностей и схемы БД - сгенерировать сущности из БД с помощью `typeorm-model-generator` и сравнив типы через типофункцию.
 
 1. Выполнить:
